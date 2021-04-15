@@ -6,14 +6,18 @@ Start Prequisites
    Git 
    JDK 8 or later 
    Maven 3.0 or later 
+   
 
-Clone To get started you can simply clone this repository using git:
+Clone Git Repository
+--------
 
 https://github.com/Sridharv-ec/userblog-automation-framework.git
 
-Running tests locally You can run the tests from the command line using:
+Run tests locally
+--------
+   Running tests locally You can run the tests from the command line using:
 
-mvn test -Dmaven.test.failure.ignore=true -Dcucumber.options="src/test/resources/functionalTests" -Dcucumber.options="-tags @regression"
+   mvn test -Dmaven.test.failure.ignore=true -Dcucumber.options="src/test/resources/functionalTests" -Dcucumber.options="-tags @regression"
 
 Framework Summary
 
