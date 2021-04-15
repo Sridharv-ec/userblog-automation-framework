@@ -70,5 +70,15 @@ Run tests locally
    
    mvn test -Dmaven.test.failure.ignore=true -Dcucumber.options="src/test/resources/functionalTests" -Dcucumber.options="-tags @regression"
 
+Test Reports
+--------
+
+The cucumber test report can be found in the CircleCI tool Artefacts
+test/cucumber-html/cucumber.html
+
+https://app.circleci.com/pipelines/github/Sridharv-ec/userblog-automation-framework/10/workflows/a4474e9c-3b45-41db-872a-816944858ab6/jobs/10/artifacts
+
+
+
 
 
