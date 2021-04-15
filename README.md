@@ -78,7 +78,7 @@ test/cucumber-html/cucumber.html
 
 https://app.circleci.com/pipelines/github/Sridharv-ec/userblog-automation-framework/10/workflows/a4474e9c-3b45-41db-872a-816944858ab6/jobs/10/artifacts
 
-You can view from the Circle Tests 
+You can also view from the Circle Tests 
 https://app.circleci.com/pipelines/github/Sridharv-ec/userblog-automation-framework/10/workflows/a4474e9c-3b45-41db-872a-816944858ab6/jobs/10/tests
 
 CircleCi Pipleline
