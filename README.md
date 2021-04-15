@@ -78,6 +78,13 @@ test/cucumber-html/cucumber.html
 
 https://app.circleci.com/pipelines/github/Sridharv-ec/userblog-automation-framework/10/workflows/a4474e9c-3b45-41db-872a-816944858ab6/jobs/10/artifacts
 
+You can view from the Circle Tests 
+https://app.circleci.com/pipelines/github/Sridharv-ec/userblog-automation-framework/10/workflows/a4474e9c-3b45-41db-872a-816944858ab6/jobs/10/tests
+
+CircleCi Pipleline
+--------
+
+![image](https://user-images.githubusercontent.com/35633304/114857685-766ca980-9de0-11eb-9716-086a4b04d0eb.png)
 
 
 
