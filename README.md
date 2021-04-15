@@ -1,5 +1,10 @@
 # userblog-automation-framework
 
+Markups
+-------
+
+The following markups are supported.  The dependencies listed are required if
+you wish to run the library. You can also run `script/bootstrap` to fetch them all.
 Started Prerequisites 
 
 Git 
