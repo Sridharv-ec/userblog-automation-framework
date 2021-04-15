@@ -14,13 +14,13 @@ Running tests locally You can run the tests from the command line using:
 
 mvn test -Dmaven.test.failure.ignore=true -Dcucumber.options="src/test/resources/functionalTests" -Dcucumber.options="-tags @regression"
 
-Framework Summary
+**Framework Summary
 
 This framework uses BDD written in Java using cucumber. Cucumber will provide feature to write BDD in gherkin language which business can understand
 This framework can be used to run component, end to end and can be be extended with browser testing tools like selenium and appium
 This framework is build on spring boot
 
-Framework structure
+**Framework structure
 
 "main/java/com/user/blog/stepdefs" - contains all the step definitions
 
