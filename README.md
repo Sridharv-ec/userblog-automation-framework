@@ -85,3 +85,13 @@ CircleCi Pipleline
 --------
 ![image](https://user-images.githubusercontent.com/35633304/114858180-07dc1b80-9de1-11eb-9354-479273371907.png)
 
+
+Test report Analysis
+--------
+We can clearly see in the above CicelCI report that build has failed due to genuine issues detected by the framework. 
+
+We have both happy path and unhappy path scenarios in our BDDs
+
+Few Unhappy path scenarios are failing due to the status code mismatch. 
+
+
