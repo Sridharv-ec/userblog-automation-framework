@@ -83,9 +83,5 @@ https://app.circleci.com/pipelines/github/Sridharv-ec/userblog-automation-framew
 
 CircleCi Pipleline
 --------
-
-![image](https://user-images.githubusercontent.com/35633304/114857685-766ca980-9de0-11eb-9716-086a4b04d0eb.png)
-
-
-
+![image](https://user-images.githubusercontent.com/35633304/114858180-07dc1b80-9de1-11eb-9354-479273371907.png)
 
