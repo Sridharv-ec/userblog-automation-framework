@@ -17,12 +17,16 @@ mvn test -Dmaven.test.failure.ignore=true -Dcucumber.options="src/test/resources
 Framework Summary
 
 •	This framework uses BDD written in Java using cucumber. Cucumber will provide feature to write BDD in gherkin language which business can understand
+
 •	This framework can be used to run component, end to end and can be be extended with browser testing tools like selenium and appium
+
 •	This framework is build on spring boot
+
 
 Framework structure
 
 •	"main/java/com/user/blog/stepdefs" - contains all the step definitions
+
 •	"main/java/com/user/blog/commonhelpers" - this package is used to added api helper java files
 •	"main/java/com/user/blog/model" > CommonBase.java" - CommomBase is a super class of all class in the framework. 
 •	(We can added reusables required for API, Browser etc)
@@ -40,6 +44,4 @@ Framework structure
 •	pom.xml - contains information about the project and configuration details used by Maven to build the project.
 •	"assertJ" is used for assertion
 •	"cucumber-html-reporter" to generate html report from cucumber json report
-![image](https://user-images.githubusercontent.com/35633304/114854831-23452780-9ddd-11eb-96e6-748ff2f37eee.png)
-
 
