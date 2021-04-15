@@ -95,3 +95,7 @@ We have both happy path and unhappy path scenarios in our BDDs
 Few Unhappy path scenarios are failing due to the status code mismatch. 
 
 
+Cross platform capability
+--------
+
+We have executed the tests successfully both in MAC and Windows machines
