@@ -63,8 +63,11 @@ Framework Structure
 Run tests locally
 --------
    Open terminal
+   
    Goto Project directory
+   
    run below command
+   
    mvn test -Dmaven.test.failure.ignore=true -Dcucumber.options="src/test/resources/functionalTests" -Dcucumber.options="-tags @regression"
 
 
