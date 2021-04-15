@@ -34,18 +34,22 @@ jobs:
           key: v1-dependencies-{{ checksum "pom.xml" }}
 
       # run tests!
-      - run: mvn test -Dmaven.test.failure.ignore=true -Dcucumber.options="src/test/resources/functionalTests" -Dcucumber.options="-tags @comments"
+      - run: mvn test -Dcucumber.options="src/test/resources/functionalTests" -Dcucumber.options="-tags @regression"
 
       - run:
           name: Save test results
           command: |
-            mkdir -p ~/test-results/junit/
-            find . -type f -regex ".*/target/.*json" -exec cp {} ~/test-results/junit/ \;
-            find . -type f -regex ".*/target/.*html" -exec cp {} ~/test-results/junit/ \;
+            mkdir -p ~/test/junit/
+            mkdir -p ~/test-results
+            mkdir -p ~/test/cucumber-html/
+            find . -type f -regex ".*/target/.*json" -exec cp {} ~/test/junit/ \;
+            find . -type f -regex ".*/target/.*html" -exec cp {} ~/test/cucumber-html/ \;
+            cp ~/test/junit/cucumber-report.json ~/test-results/cucumber-report.cucumber
+            ls ~/test-results
           when: always
       - store_test_results:
-          path: ~/test-results/junit
+          path: ~/test-results
+          when: always
       - store_artifacts:
-          path: ~/test-results/junit
-      - store_artifacts:
-          path:  target/my-reports
+          path: ~/test
+          when: always
