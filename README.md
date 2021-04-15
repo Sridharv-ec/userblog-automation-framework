@@ -13,11 +13,6 @@ Clone Git Repository
 
 https://github.com/Sridharv-ec/userblog-automation-framework.git
 
-Run tests locally
---------
-   Running tests locally You can run the tests from the command line using:
-
-   mvn test -Dmaven.test.failure.ignore=true -Dcucumber.options="src/test/resources/functionalTests" -Dcucumber.options="-tags @regression"
 
 Framework Summary
 --------
@@ -63,5 +58,14 @@ Framework Structure
    •	"assertJ" is used for assertion
 
    •	"cucumber-html-reporter" to generate html report from cucumber json report
+
+
+Run tests locally
+--------
+   Open terminal
+   Goto Project directory
+   run below command
+   mvn test -Dmaven.test.failure.ignore=true -Dcucumber.options="src/test/resources/functionalTests" -Dcucumber.options="-tags @regression"
+
 
 
