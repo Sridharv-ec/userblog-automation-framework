@@ -153,7 +153,7 @@
           <artifactId>maven-surefire-plugin</artifactId>
           <version>2.20</version>
           <configuration>
-            <testSourceDirectory>user-blog-automation-framework/src/main/test</testSourceDirectory>
+            <testSourceDirectory>userblog-automation-framework/src/main/test</testSourceDirectory>
             <includes>
               <include>**/*UserBlogTestRunner.java</include>
             </includes>
