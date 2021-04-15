@@ -9,7 +9,7 @@ import org.springframework.stereotype.Component;
 import java.util.HashMap;
 
 /**
- * This is a comments Api Helper Class which contains step definitions implementation of the BDD Test Scenarios of the API.
+ * This is a Create User Api Helper Class which contains step definitions implementation of the BDD Test Scenarios of the API.
  *
  * @author Sridhar Vuttarkar
  */
@@ -32,7 +32,7 @@ public class CreateUserApiHelper extends RestBase {
     private boolean defaultTemplateSet = false;
 
     /**
-     * Returns the url of the to use for the comments-api
+     * Returns the url of the to use for the CreateUser-api
      *
      * @return endpointUrl String
      */
@@ -41,7 +41,7 @@ public class CreateUserApiHelper extends RestBase {
     }
 
     /**
-     * sendCommentsApiRequest() restassured get call to fetch comments
+     * sendCreateUserApiRequest() restassured post call to create users
      */
     public void sendCreateUserApiRequest(String userId, String id) {
         if(!defaultTemplateSet) {
@@ -53,7 +53,7 @@ public class CreateUserApiHelper extends RestBase {
 
 
     /**
-     * set the default headers and enable the swagger validation for post authmech api
+     * set the default headers and set the json body fields
      */
     public void setDefaultRequestTemplate(String userId, String id) {
         HashMap<String, Object> headers = new HashMap<>();
@@ -65,6 +65,9 @@ public class CreateUserApiHelper extends RestBase {
         defaultTemplateSet = true;
     }
 
+    /**
+     * This method is used to validate the expected response with actual response
+     */
     public boolean validateResponse(){
         try {
             return compareResposeWithExpectedResponseBody(getValidatableResponse()

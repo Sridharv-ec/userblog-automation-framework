@@ -5,7 +5,6 @@ Feature: json place holder create user api bdds
 #      USER BLOG - CREATE USER API Scenarios
 # *************************************************************
 
-
   @happypath
   Scenario Outline: POST Request to create User with new userid and id and validate the response
     Given a POST request is made to create User with "<userId>" and "<id>"
@@ -14,7 +13,6 @@ Feature: json place holder create user api bdds
     Examples:
       | userId | id  |
       | 11     | 101 |
-
 
   @removeFields
   Scenario: POST Request to create user with missing mandatory body fields

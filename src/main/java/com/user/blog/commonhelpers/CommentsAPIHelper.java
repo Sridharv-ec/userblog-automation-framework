@@ -6,7 +6,6 @@ import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
 
 import java.util.HashMap;
-import java.util.UUID;
 
 /**
  * This is a comments Api Helper Class which contains step definitions implementation of the BDD Test Scenarios of the API.
@@ -46,7 +45,7 @@ public class CommentsAPIHelper extends RestBase {
         parameters.put("id", id);
         setParameters(parameters);
 
-        get(getEndpoint(id), "jsonPlaceHolder", false, true, false, false);
+        get(getEndpoint(id), "jsonPlaceHolder", false, true);
         defaultTemplateSet = false;
     }
 

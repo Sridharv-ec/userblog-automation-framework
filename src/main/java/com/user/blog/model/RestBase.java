@@ -6,13 +6,11 @@ import com.jayway.jsonpath.Predicate;
 import io.restassured.config.*;
 import io.restassured.filter.log.RequestLoggingFilter;
 import io.restassured.filter.log.ResponseLoggingFilter;
-import io.restassured.http.ContentType;
 import io.restassured.http.Header;
 import io.restassured.http.Headers;
 import io.restassured.response.Response;
 import io.restassured.response.ValidatableResponse;
 import io.restassured.specification.RequestSpecification;
-import net.minidev.json.JSONArray;
 import org.eclipse.jetty.io.WriterOutputStream;
 import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
@@ -25,10 +23,12 @@ import java.util.concurrent.TimeUnit;
 
 import static io.restassured.RestAssured.config;
 import static io.restassured.RestAssured.given;
-import static io.restassured.config.EncoderConfig.encoderConfig;
 import static io.restassured.config.HttpClientConfig.httpClientConfig;
 import static junit.framework.TestCase.assertTrue;
 
+/**
+ *
+ */
 @Component
 @Scope("cucumber-glue")
 public class RestBase extends CommonBase {
@@ -37,6 +37,7 @@ public class RestBase extends CommonBase {
 
     }
 
+    //enum to different httm methods used
     public static enum HttpMethods {
         GET,
         POST,
@@ -49,19 +50,31 @@ public class RestBase extends CommonBase {
     }
 
 
-    protected void get(String url, String nameOfRequest, boolean headers, boolean parameters, boolean cookies, boolean followRedirects) {
+    /**
+     * @param url -- endpoint url
+     * @param nameOfRequest : request Name
+     * @param headers : Request Headers
+     * @param parameters: request paramenter
+     */
+    protected void get(String url, String nameOfRequest, boolean headers, boolean parameters) {
         this.setRequestName(nameOfRequest);
-        this.get(url, headers, parameters, cookies, followRedirects);
+        this.get(url, headers, parameters);
     }
 
-    protected void get(String url, boolean headers, boolean parameters, boolean cookies, boolean followRedirects) {
+    /**
+     * This method make a get request to the restAssured to get the response
+     * @param url -- endpoint url
+     * @param headers : Request Headers
+     * @param parameters: request paramenter
+     */
+    protected void get(String url, boolean headers, boolean parameters) {
         if (getRequestName().equals("")) {
             setRequestName(url);
         }
 
         setTargetUrl(url);
         setupNewCapture();
-        setRequestSpecification(given().filter(new RequestLoggingFilter(getRequestCapture())).filter(new ResponseLoggingFilter(getResponseCapture())).redirects().follow(followRedirects));
+        setRequestSpecification(given().filter(new RequestLoggingFilter(getRequestCapture())).filter(new ResponseLoggingFilter(getResponseCapture())).redirects().follow(false));
         RestAssuredConfig myConfig = setRequestConfig(url);
         setRequestSpecification(getRequestSpecification().config(myConfig));
 
@@ -273,10 +286,7 @@ public class RestBase extends CommonBase {
     }
 
     public static boolean isValidEmailAddress(String email) {
-        boolean stricterFilter = true;
-        String stricterFilterString = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,4}";
-        String laxString = ".+@.+\\.[A-Za-z]{2}[A-Za-z]*";
-        String emailRegex = stricterFilter ? stricterFilterString : laxString;
+        String emailRegex = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,4}";
         java.util.regex.Pattern p = java.util.regex.Pattern.compile(emailRegex);
         java.util.regex.Matcher m = p.matcher(email);
         return m.matches();
@@ -457,11 +467,6 @@ public class RestBase extends CommonBase {
         }
 
         this.captureRequestResponse();
-    }
-
-    protected void post(String url, String nameOfRequest, boolean body, boolean headers, boolean parameters, boolean cookies, boolean followRedirects, boolean formParameters) {
-        setRequestName(nameOfRequest);
-        post(url, body, headers, parameters, cookies, followRedirects, formParameters);
     }
 
     protected void post(String url, boolean body, boolean headers, boolean parameters, boolean cookies, boolean followRedirects, boolean formParameters) {

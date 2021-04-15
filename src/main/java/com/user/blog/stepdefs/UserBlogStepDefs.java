@@ -20,7 +20,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 
 
 /**
- * Step definition class for USER BLOG  api contains the step definitions of the BDD test scenarios of the API
+ * Step definition class for USER BLOG api contains the step definitions of the BDD test scenarios of the API
  * @author Sridhar
  */
 public class UserBlogStepDefs {
@@ -46,20 +46,17 @@ public class UserBlogStepDefs {
 
     @Before
     public void setup(Scenario scenarioName) {
-
         System.out.println(Thread.currentThread().getName() + ":" + Thread.currentThread().getId());
-
         scenario = scenarioName;
-
         restBase.setScenario(scenario);
-
     }
 
     @After
     public void tearDown(Scenario scenario) {
-
         if (scenario.isFailed()) {
-
+            if (restBase.getResponse() != null) {
+                scenario.log(restBase.getEvidences("TEST FAILED"));
+            }
         }
     }
 

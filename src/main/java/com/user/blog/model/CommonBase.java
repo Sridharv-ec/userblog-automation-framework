@@ -20,10 +20,14 @@ public class CommonBase {
     }
 
     @Autowired
-    public CommonVariables variables = new CommonVariables();
+    public CommonVariables variables ;
 
     public static final Logger LOG = LoggerFactory.getLogger(CommonBase.class);
 
+    /**
+     * This method will sets the endpoint url and set the endpoint url
+     * Parameters: url - the component api endpoint url passed from the helper file
+     */
     protected void setTargetUrl(String url) {
         if (this.variables.endpointUrl.length() == 0) {
             this.variables.endpointUrl = url;
@@ -37,10 +41,17 @@ public class CommonBase {
         }
     }
 
+    /**
+     * This method will sets the Cucumber scenario variable in scenario global variable
+     * Parameters: scen
+     */
     public void setScenario(Scenario scen) {
         this.variables.scenario = scen;
     }
 
+    /**
+     * This method will get the Cucumber scenario value that was setup and used in the framework
+     */
     public Scenario getScenario() {
         return this.variables.scenario;
     }

@@ -1,14 +1,7 @@
 package com.user.blog.model;
 
 import java.io.*;
-import java.security.KeyStore;
-import java.sql.Connection;
-import java.sql.ResultSet;
-import java.sql.Statement;
 import java.util.*;
-
-import net.minidev.json.JSONArray;
-
 import org.eclipse.jetty.io.WriterOutputStream;
 import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
@@ -17,9 +10,7 @@ import com.jayway.jsonpath.DocumentContext;
 
 
 import io.cucumber.java.Scenario;
-import io.restassured.http.Cookie;
 import io.restassured.response.Response;
-import io.restassured.response.ValidatableResponse;
 import io.restassured.specification.RequestSpecification;
 
 @Component
@@ -40,8 +31,8 @@ public class CommonVariables {
     protected HashMap<String, Object> parametersMap = new HashMap<>();
     protected DocumentContext documentContext;
 
-
     protected String overrideContentType = null;
+
 
     /////////////////////////////////////////
     // Response Details

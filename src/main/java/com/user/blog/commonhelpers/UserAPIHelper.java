@@ -39,7 +39,7 @@ public class UserAPIHelper extends RestBase {
     public void sendUsersApiRequest(String userName) {
         HashMap<String, Object> parameters = new HashMap<>();
         parameters.put("username", userName);
-        get(getEndpoint(userName), "jsonPlaceHolder", false, false, false, false);
+        get(getEndpoint(userName), "jsonPlaceHolder", false, false);
     }
 
 }
