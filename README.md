@@ -76,10 +76,10 @@ Test Reports
 The cucumber test report can be found in the CircleCI tool Artefacts
 test/cucumber-html/cucumber.html
 
-https://app.circleci.com/pipelines/github/Sridharv-ec/userblog-automation-framework/10/workflows/a4474e9c-3b45-41db-872a-816944858ab6/jobs/10/artifacts
+https://app.circleci.com/pipelines/github/Sridharv-ec/userblog-automation-framework/24/workflows/6a7fccc5-8ef7-43be-b12c-c276884a5450/jobs/24/artifacts
 
 You can also view from the Circle Tests 
-https://app.circleci.com/pipelines/github/Sridharv-ec/userblog-automation-framework/10/workflows/a4474e9c-3b45-41db-872a-816944858ab6/jobs/10/tests
+https://app.circleci.com/pipelines/github/Sridharv-ec/userblog-automation-framework/24/workflows/6a7fccc5-8ef7-43be-b12c-c276884a5450/jobs/24/tests
 
 CircleCi Pipleline
 --------
