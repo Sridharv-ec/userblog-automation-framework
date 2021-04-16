@@ -15,9 +15,6 @@ import java.net.URL;
 @Scope("cucumber-glue")
 public class CommonBase {
 
-    public CommonBase() {
-
-    }
 
     @Autowired
     public CommonVariables variables ;

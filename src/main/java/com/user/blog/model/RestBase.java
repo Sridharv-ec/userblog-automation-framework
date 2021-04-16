@@ -33,9 +33,6 @@ import static junit.framework.TestCase.assertTrue;
 @Scope("cucumber-glue")
 public class RestBase extends CommonBase {
 
-    public RestBase() {
-
-    }
 
     //enum to different httm methods used
     public static enum HttpMethods {
